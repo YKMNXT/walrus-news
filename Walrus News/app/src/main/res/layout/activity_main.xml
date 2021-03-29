@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="button1Clicked"
+            type="boolean" />
+        <variable
+            name="button2Clicked"
+            type="boolean" />
+        <variable
+            name="textViewClicked"
+            type="boolean" />
+
+        <import type="android.view.View"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MainActivity">
+
+        <View
+            android:id="@+id/button1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@color/orange"
+            android:visibility="@{textViewClicked?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/button2"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@color/turquoise_blue"
+            android:visibility="@{button1Clicked?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tap_to_view_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_grey"
+            android:gravity="bottom"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            android:visibility="@{button2Clicked?View.VISIBLE:View.GONE}"
+            android:text="Tap To Move \nto view \nNews List."
+            android:textColor="@color/white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

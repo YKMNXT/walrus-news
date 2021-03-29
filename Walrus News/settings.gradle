@@ -1,0 +1,2 @@
+rootProject.name='Walrus News App'
+include ':app'

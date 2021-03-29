@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Walrus News</string>
+    <string name="hyphen">%s</string>
+    <string name="emptyString"></string>
+    <string name="anonymous">Anonymous</string>
+    <string name="networkerror">Please Check Your Internet Connectivity</string>
+    <string name="whats_the_buzz">What\'s\nThe Buzz?</string>
+    <string name="see_full_news">See Full News</string>
+
+
+</resources>
